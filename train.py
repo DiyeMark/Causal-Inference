@@ -1,3 +1,4 @@
+from pathlib import Path
 import dvc.api
 import os
 import mlflow
@@ -24,9 +25,10 @@ from sklearn.metrics import (
 mlflow.set_experiment("Causal Inference")
 
 if __name__ == '__main__':
-    data_dir = "./data"
-    metrics_dir = "./metrics"
-    clean_data = pd.read_csv(data_dir + "/data_clean.csv")
+    root_dir = Path().cwd()
+    data_dir = root_dir / "data"
+    metrics_dir = root_dir / "metrics"
+    clean_data = pd.read_csv(data_dir / "data_clean.csv")
 
     standard_scaler = StandardScaler()
     logreg_clf = LogisticRegression()
@@ -65,11 +67,11 @@ if __name__ == '__main__':
         if not os.path.exists(metrics_dir):
             metrics_dir.mkdir()
 
-        with open(metrics_dir + "/results.txt", "w") as metrics_file:
+        with open(metrics_dir / "results.txt", "w") as metrics_file:
             metrics_file.write(
                 f"Accuracy: {accuracy} \n\nClassification Report: \n{clf_report} \n"
             )
 
-        plt.savefig(metrics_dir + "/metrics_plot.png")
+        plt.savefig(metrics_dir / "metrics_plot.png")
 
 
