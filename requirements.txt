@@ -4,3 +4,5 @@ dvc~=2.11.0
 mlflow~=1.27.0
 matplotlib~=3.5.2
 scikit-learn~=0.24.2
+mysql~=5.7.24
+mysql-connector-python~=8.0.18
