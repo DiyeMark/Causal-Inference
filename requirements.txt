@@ -2,3 +2,5 @@ setuptools~=60.2.0
 pandas~=1.4.3
 dvc~=2.11.0
 mlflow~=1.27.0
+matplotlib~=3.5.2
+scikit-learn~=0.24.2

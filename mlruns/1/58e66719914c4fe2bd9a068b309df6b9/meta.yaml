@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/diyemark/PycharmProjects/10Academy/Week-7/Causal-Inference/mlruns/1/58e66719914c4fe2bd9a068b309df6b9/artifacts
+end_time: 1656822850846
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 58e66719914c4fe2bd9a068b309df6b9
+run_uuid: 58e66719914c4fe2bd9a068b309df6b9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1656822850660
+status: 3
+tags: []
+user_id: diyemark

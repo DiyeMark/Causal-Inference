@@ -9,10 +9,11 @@ jobs:
       - name: Train model
         run: |
           pip install -r requirements.txt
-#          python train.py
+          python train.py
       - name: Write CML report
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-#          cat results.txt >> report.md
-#          cml send-comment report.md
+          cat metrics/results.txt >> report.md
+          cml publish metrics/metrics_plot.png --md --title 'Confusion Matrix' >> report.md
+          cml send-comment report.md
